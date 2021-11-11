@@ -1,0 +1,60 @@
+<div class="container">
+  <mat-card class="card-media">
+    <mat-card-title>Média</mat-card-title>
+    <mat-card-content>
+      <form class="example-form" (ngSubmit)="onSubmit()" #formMedia="ngForm">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>AC1</mat-label>
+          <input matInput placeholder="* 1,5" name="ac1" type="number" [(ngModel)]="ac1">
+          <mat-hint align="start"><strong>Peso de 0,15</strong> </mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>AC2</mat-label>
+          <input matInput placeholder="* 3" name="ac2" type="number" [(ngModel)]="ac2">
+          <mat-hint align="start"><strong>Peso de 0,30</strong> </mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>AG</mat-label>
+          <input matInput placeholder="* 1" name="ag" type="number" [(ngModel)]="ag">
+          <mat-hint align="start"><strong>Peso de 0,10</strong> </mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>AF</mat-label>
+          <input matInput placeholder="* 4,5" name="af" type="number" [(ngModel)]="af">
+          <mat-hint align="start"><strong>Peso de 0,45</strong> </mat-hint>
+        </mat-form-field>
+        <button mat-button>Calcular Média</button>
+      </form>
+    </mat-card-content>
+    <mat-card-footer style="padding: 16px;">
+      Média:
+      <span>{{ media }}</span>
+      <br>  
+      Situação:
+      <span>{{ situation }}</span>
+    </mat-card-footer>
+  </mat-card>
+</div>
+<style>
+  .example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.card-media {
+  width: 400px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+</style>
